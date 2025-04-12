@@ -7,27 +7,32 @@ const Skills = () => {
     {
       category: "Technical Skills",
       skills: [
-        { name: "Skill 1", level: 90 },
-        { name: "Skill 2", level: 85 },
-        { name: "Skill 3", level: 75 },
-        { name: "Skill 4", level: 80 },
+        { name: "Python", level: 90 },
+        { name: "HTML/CSS/JavaScript", level: 85 },
+        { name: "Ruby/Ruby on Rails", level: 80 },
+        { name: "C Programming", level: 75 },
+        { name: "MYSQL", level: 70 },
+        { name: "MatLab", level: 85 },
+      ]
+    },
+    {
+      category: "Data & Analysis",
+      skills: [
+        { name: "Microsoft Excel", level: 95 },
+        { name: "RStudio", level: 85 },
+        { name: "Data Visualization", level: 80 },
+        { name: "Statistical Analysis", level: 90 },
+        { name: "Google Analytics", level: 75 },
       ]
     },
     {
       category: "Professional Skills",
       skills: [
-        { name: "Skill 5", level: 95 },
-        { name: "Skill 6", level: 85 },
-        { name: "Skill 7", level: 80 },
-        { name: "Skill 8", level: 90 },
-      ]
-    },
-    {
-      category: "Languages",
-      skills: [
-        { name: "Language 1", level: 100 },
-        { name: "Language 2", level: 75 },
-        { name: "Language 3", level: 60 },
+        { name: "Leadership", level: 95 },
+        { name: "Public Speaking", level: 90 },
+        { name: "Project Management", level: 85 },
+        { name: "Problem Solving", level: 90 },
+        { name: "Team Collaboration", level: 95 },
       ]
     }
   ];

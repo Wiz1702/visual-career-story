@@ -12,28 +12,44 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "Job Title",
-      company: "Company Name",
-      location: "Location",
-      period: "Month Year - Present",
-      description: "Describe your responsibilities, achievements, and the skills you utilized in this position. Use concrete examples and metrics when possible to demonstrate your impact.",
-      skills: ["Skill 1", "Skill 2", "Skill 3"]
+      title: "Software Engineer (Fellowship)",
+      company: "Headstarter AI",
+      location: "Remote",
+      period: "July 2024 - March 2025",
+      description: "Built 5+ AI apps and APIs using NextJS, OpenAI, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from design to deployment leading + engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git, and Microservice patterns.",
+      skills: ["NextJS", "OpenAI", "StripeAPI", "Agile", "CI/CD", "Git", "MVC"]
     },
     {
-      title: "Previous Job Title",
-      company: "Previous Company Name",
-      location: "Location",
-      period: "Month Year - Month Year",
-      description: "Describe your responsibilities, achievements, and the skills you utilized in this position. Focus on transferable skills and accomplishments that are relevant to your target roles.",
-      skills: ["Skill 1", "Skill 4", "Skill 5"]
+      title: "Business Consulting/ Data Analytics Intern",
+      company: "Ronnie K. Irani Center for the Creation of Economic Wealth",
+      location: "Tulsa, Oklahoma",
+      period: "May - July 2024",
+      description: "Analyzed a market of 131,000 Blacks and Hispanics in the Kendall Whittier district. Forecasted a potential market of 3,340 Black Tulsans to deliver data-driven insights for targeted outreach. Introduced key programs and identified 21+ potential partners for Circle Cinema (Client). Created a scalable business/financial model to target the market guided by former Mckinsey consultants.",
+      skills: ["Data Analytics", "Market Analysis", "Excel", "RStudio", "Financial Modeling"]
     },
     {
-      title: "Earlier Job Title",
-      company: "Earlier Company Name",
-      location: "Location",
-      period: "Month Year - Month Year",
-      description: "For earlier positions, keep descriptions briefer while still highlighting notable achievements and skills gained.",
-      skills: ["Skill 2", "Skill 6", "Skill 7"]
+      title: "Software (Frontend) Developer",
+      company: "E-Commerce Website Development",
+      location: "Gambier, Ohio",
+      period: "January - May 2024",
+      description: "Designed and implemented the frontend of an e-commerce website. Embedded designs into the application and ensured the functionality of various design elements. Collaborated with my team on integrating product listings, user authentication, and order management features. Awarded Best Project of the Semester for outstanding performance and innovation.",
+      skills: ["Ruby on Rails", "HTML", "CSS", "JavaScript", "UI/UX Design"]
+    },
+    {
+      title: "Project Lead",
+      company: "Kenyon College Focal Vocabulary Dictionary",
+      location: "Gambier, Ohio",
+      period: "December 2023 - March 2024",
+      description: "Designed and created an online dictionary to streamline access to essential college-specific terminology. Served as a resource for 200+ faculty and 800+ students, and facilitated a smoother transition for future freshmen into campus life.",
+      skills: ["HTML", "CSS", "JavaScript", "GitHub", "AWS"]
+    },
+    {
+      title: "Summer Intern and Junior Supervisor",
+      company: "PowerCom Africa",
+      location: "Accra, Ghana",
+      period: "June - August 2021",
+      description: "Collaborated with the engineering team to develop smart electronic meters in Accra. Performed tests on 50 prototypes to ensure compliance with industry standards and regulations. Conducted 30+ maintenance checks and firmware updates to ensure optimal functionality.",
+      skills: ["Hardware Testing", "Firmware Updates", "Quality Assurance"]
     }
   ];
 

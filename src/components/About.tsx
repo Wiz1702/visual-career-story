@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { User, MapPin, Briefcase, Calendar } from 'lucide-react';
+import { User, MapPin, Briefcase, Calendar, Mail, Linkedin, Phone } from 'lucide-react';
 
 const About = () => {
   return (
@@ -26,7 +26,27 @@ const About = () => {
                 <MapPin className="text-gray-400" />
                 <h3 className="font-medium">Location</h3>
               </div>
-              <p>Your Gambier, Ohio</p>
+              <p>Gambier, Ohio</p>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Mail className="text-gray-400" />
+                <h3 className="font-medium">Email</h3>
+              </div>
+              <p>akanwe1@kenyon.edu</p>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Phone className="text-gray-400" />
+                <h3 className="font-medium">Phone</h3>
+              </div>
+              <p>740-358-3649</p>
             </CardContent>
           </Card>
           
@@ -36,30 +56,30 @@ const About = () => {
                 <Briefcase className="text-gray-400" />
                 <h3 className="font-medium">Experience</h3>
               </div>
-              <p>X 2+ Years of Experience</p>
+              <p>Software Development & Data Analytics</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
-                <Calendar className="text-gray-400" />
-                <h3 className="font-medium">Availability</h3>
+                <Linkedin className="text-gray-400" />
+                <h3 className="font-medium">LinkedIn</h3>
               </div>
-              <p>Available for new opportunities</p>
+              <p>Wisdom Wemoatu Akanwe</p>
             </CardContent>
           </Card>
         </div>
         
         <div className="space-y-4 text-gray-600">
           <p>
-           I am a software developer with 2+ years Experience
+            I am a Mathematics & Statistics major with a focus on Data Science and a minor in Computer Science at Kenyon College.
           </p>
           <p>
-            I am passionate about Machine Learning, and how to use software to impact lives positively.
+            I am passionate about leveraging technology and data analytics to solve complex problems and create impactful solutions.
           </p>
           <p>
-           Looking forward to opportunities involving analysis of data and.
+            With experience in software development, data analysis, and business consulting, I am looking forward to opportunities where I can apply my technical and analytical skills to drive innovation.
           </p>
         </div>
       </div>
