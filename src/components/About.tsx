@@ -53,13 +53,13 @@ const About = () => {
         
         <div className="space-y-4 text-gray-600">
           <p>
-           
+           I am a software developer with 2+ years Experience
           </p>
           <p>
-            You can mention your approach to work, your passion for your field, and perhaps something about your journey that led you to where you are today.
+            I am passionate about Machine Learning, and how to use software to impact lives positively.
           </p>
           <p>
-            End with a forward-looking statement about what you're seeking in your next role or the types of projects you're most excited to work on.
+           Looking forward to opportunities involving analysis of data and.
           </p>
         </div>
       </div>
