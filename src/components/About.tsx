@@ -16,7 +16,7 @@ const About = () => {
                 <User className="text-gray-400" />
                 <h3 className="font-medium">Name</h3>
               </div>
-              <p>Your Full Name</p>
+              <p>Wisdom Wemoatu Akanwe</p>
             </CardContent>
           </Card>
           
@@ -26,7 +26,7 @@ const About = () => {
                 <MapPin className="text-gray-400" />
                 <h3 className="font-medium">Location</h3>
               </div>
-              <p>Your Location</p>
+              <p>Your Gambier, Ohio</p>
             </CardContent>
           </Card>
           
@@ -36,7 +36,7 @@ const About = () => {
                 <Briefcase className="text-gray-400" />
                 <h3 className="font-medium">Experience</h3>
               </div>
-              <p>X Years of Experience</p>
+              <p>X 2+ Years of Experience</p>
             </CardContent>
           </Card>
           
@@ -53,7 +53,7 @@ const About = () => {
         
         <div className="space-y-4 text-gray-600">
           <p>
-            A more detailed paragraph about yourself, your professional journey, values, and what drives you in your career. This is a good place to add a personal touch and give potential employers or clients a better sense of who you are.
+           
           </p>
           <p>
             You can mention your approach to work, your passion for your field, and perhaps something about your journey that led you to where you are today.
