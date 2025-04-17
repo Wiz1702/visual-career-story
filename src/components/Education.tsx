@@ -10,7 +10,6 @@ const Education = () => {
       institution: "Kenyon College",
       location: "Gambier, Ohio",
       period: "2023 - 2027 (Expected)",
-      gpa: "4.0/4.0",
       minor: "Computer Science",
       courses: [
         "Data Structures and Algorithms",
@@ -23,7 +22,8 @@ const Education = () => {
         "Classical Physics",
         "AI & Machine Learning",
         "Web Development",
-        "Software Development"
+        "Software Development",
+        "Software & System development"
       ]
     }
   ];
@@ -72,7 +72,6 @@ const Education = () => {
                     <h3 className="text-xl font-semibold">{edu.degree} in {edu.field}</h3>
                     <h4 className="text-lg text-gray-700 mb-2">{edu.institution}</h4>
                     <p className="font-medium text-gray-600">Minor: {edu.minor}</p>
-                    <p className="font-medium text-gray-600 mb-2">GPA: {edu.gpa}</p>
                     
                     <div className="flex flex-wrap gap-x-4 gap-y-2 mb-3 text-gray-600 text-sm">
                       <div className="flex items-center gap-1">
