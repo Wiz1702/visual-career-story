@@ -17,7 +17,7 @@ const ResumeLayout = ({ children, className }: ResumeLayoutProps) => {
       </main>
       <footer className="bg-white py-6 border-t">
         <div className="container mx-auto px-4 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} - Built with React and Tailwind CSS
+          © {new Date().getFullYear()} - Built with React and Tailwind CSS 
         </div>
       </footer>
     </div>
