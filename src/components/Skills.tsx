@@ -12,14 +12,14 @@ const Skills = () => {
         { name: "Ruby/Ruby on Rails", level: 80 },
         { name: "C Programming", level: 75 },
         { name: "MYSQL", level: 70 },
-        { name: "MatLab", level: 85 },
+        { name: "MatLab", level: 60 },
       ]
     },
     {
       category: "Data & Analysis",
       skills: [
         { name: "Microsoft Excel", level: 95 },
-        { name: "RStudio", level: 85 },
+        { name: "RStudio", level: 95},
         { name: "Data Visualization", level: 80 },
         { name: "Statistical Analysis", level: 90 },
         { name: "Google Analytics", level: 75 },
