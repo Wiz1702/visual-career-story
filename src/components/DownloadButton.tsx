@@ -89,7 +89,7 @@ My 2D Game (Personal Project)  - (Over 500+ players)`;
   return (
     <Button variant="outline" className="flex items-center gap-2" onClick={handleDownload}>
       <Download size={16} />
-      <span>Resume</span>
+      <span>Download Resume</span>
     </Button>
   );
 };
