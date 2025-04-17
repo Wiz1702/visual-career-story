@@ -12,7 +12,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["HTML", "CSS", "JavaScript", "AWS", "GitHub"],
       liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "https://github.com/Wiz1702/KenyonFocal"
     },
     {
       title: "E-Commerce Website",
@@ -20,7 +20,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["Ruby on Rails", "HTML", "CSS", "JavaScript"],
       liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "https://github.com/NickJNelson03/E-commerceWebsite"
     },
     {
       title: "2D Game (Personal Project)",
@@ -28,7 +28,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["Game Development", "JavaScript", "HTML5 Canvas", "CSS"],
       liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "git@github.com:Wiz1702/Wisdomfloatmaster.git"
     }
   ];
 
