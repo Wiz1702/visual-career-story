@@ -14,7 +14,7 @@ const About = () => {
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
                 <User className="text-gray-400" />
-                <h3 className="font-medium">Name</h3>
+                <h3 className="font-medium"></h3>
               </div>
               <p>Wisdom Wemoatu Akanwe</p>
             </CardContent>
