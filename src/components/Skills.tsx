@@ -5,34 +5,33 @@ import { Progress } from '@/components/ui/progress';
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Technical Skills",
+      category: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "HTML/CSS/JavaScript", level: 85 },
-        { name: "Ruby/Ruby on Rails", level: 80 },
-        { name: "C Programming", level: 75 },
-        { name: "MYSQL", level: 70 },
-        { name: "MatLab", level: 60 },
+        { name: "Python", level: 95 },
+        { name: "C++", level: 85 },
+        { name: "JavaScript", level: 90 },
+        { name: "R", level: 85 },
       ]
     },
     {
-      category: "Data & Analysis",
+      category: "Technologies & Frameworks",
       skills: [
-        { name: "Microsoft Excel", level: 95 },
-        { name: "RStudio", level: 95},
-        { name: "Data Visualization", level: 80 },
-        { name: "Statistical Analysis", level: 90 },
-        { name: "Google Analytics", level: 75 },
+        { name: "Next.js", level: 85 },
+        { name: "Node.js", level: 80 },
+        { name: "TypeScript", level: 80 },
+        { name: "React", level: 85 },
+        { name: "SQL", level: 75 },
+        { name: "Git/GitHub", level: 90 },
       ]
     },
     {
-      category: "Professional Skills",
+      category: "Tools & Databases",
       skills: [
-        { name: "Leadership", level: 95 },
-        { name: "Public Speaking", level: 90 },
-        { name: "Project Management", level: 85 },
-        { name: "Problem Solving", level: 90 },
-        { name: "Team Collaboration", level: 95 },
+        { name: "Drizzle ORM", level: 70 },
+        { name: "MariaDB", level: 70 },
+        { name: "Docker", level: 75 },
+        { name: "AWS", level: 70 },
+        { name: "phpMyAdmin", level: 75 },
       ]
     }
   ];

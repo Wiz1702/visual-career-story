@@ -12,44 +12,28 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer (Fellowship)",
-      company: "Headstarter AI",
-      location: "Remote",
-      period: "July 2024 - March 2025",
-      description: "Built 5+ AI apps and APIs using NextJS, OpenAI, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from design to deployment leading + engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git, and Microservice patterns.",
-      skills: ["NextJS", "OpenAI", "StripeAPI", "Agile", "CI/CD", "Git", "MVC"]
+      title: "Software Engineer Intern",
+      company: "Expert Learning Systems",
+      location: "Dublin, OH",
+      period: "May 2025 - Present",
+      description: "Developing a scalable web application for 300+ schools in Belize to handle hardware requests, issue logging, and donor engagement, in collaboration with the Government of Belize and a former Apple engineer. Implementing with React for frontend, NodeJS for backend, and phpMyAdmin for database management.",
+      skills: ["React", "Node.js", "phpMyAdmin", "Web Development", "Database Management"]
     },
     {
-      title: "Business Consulting/ Data Analytics Intern",
+      title: "Data Analytics Intern",
       company: "Ronnie K. Irani Center for the Creation of Economic Wealth",
-      location: "Tulsa, Oklahoma",
-      period: "May - July 2024",
-      description: "Analyzed a market of 131,000 Blacks and Hispanics in the Kendall Whittier district. Forecasted a potential market of 3,340 Black Tulsans to deliver data-driven insights for targeted outreach. Introduced key programs and identified 21+ potential partners for Circle Cinema (Client). Created a scalable business/financial model to target the market guided by former Mckinsey consultants.",
-      skills: ["Data Analytics", "Market Analysis", "Excel", "RStudio", "Financial Modeling"]
+      location: "Tulsa, OK",
+      period: "May 2024 - July 2024",
+      description: "Analyzed market data and forecasted engagement strategies for 3,340 Black Tulsans using Excel, Python and R. Identified 21+ potential partners for Circle Cinema through data-driven insights and strategic outreach. Built a scalable business model for enhanced community engagement across 131K+ residents.",
+      skills: ["Data Analytics", "Python", "R", "Excel", "Market Analysis", "Strategic Planning"]
     },
     {
-      title: "Software (Frontend) Developer",
-      company: "E-Commerce Website Development",
-      location: "Gambier, Ohio",
-      period: "January - May 2024",
-      description: "Designed and implemented the frontend of an e-commerce website. Embedded designs into the application and ensured the functionality of various design elements. Collaborated with my team on integrating product listings, user authentication, and order management features. Awarded Best Project of the Semester for outstanding performance and innovation.",
-      skills: ["Ruby on Rails", "HTML", "CSS", "JavaScript", "UI/UX Design"]
-    },
-    {
-      title: "Project Lead",
-      company: "Kenyon College Focal Vocabulary Dictionary",
-      location: "Gambier, Ohio",
-      period: "December 2023 - March 2024",
-      description: "Designed and created an online dictionary to streamline access to essential college-specific terminology. Served as a resource for 200+ faculty and 800+ students, and facilitated a smoother transition for future freshmen into campus life.",
-      skills: ["HTML", "CSS", "JavaScript", "GitHub", "AWS"]
-    },
-    {
-      title: "Summer Intern and Junior Supervisor",
-      company: "PowerCom Africa",
-      location: "Accra, Ghana",
-      period: "June - August 2021",
-      description: "Collaborated with the engineering team to develop smart electronic meters in Accra. Performed tests on 50 prototypes to ensure compliance with industry standards and regulations. Conducted 30+ maintenance checks and firmware updates to ensure optimal functionality.",
-      skills: ["Hardware Testing", "Firmware Updates", "Quality Assurance"]
+      title: "Teaching Assistant - Data Structures and Algorithms",
+      company: "Kenyon College",
+      location: "Gambier, OH",
+      period: "Jan 2024 - Present",
+      description: "Led problem set walkthroughs and held sessions for 200+ students, improving understanding & performance. Assisted in restructuring weekly section content and quizzes, resulting in positive course feedback.",
+      skills: ["Teaching", "Data Structures", "Algorithms", "Student Mentoring", "Curriculum Development"]
     }
   ];
 

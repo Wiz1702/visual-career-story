@@ -7,28 +7,28 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Kenyon College Focal Vocabulary Dictionary",
-      description: "An online dictionary to streamline access to essential college-specific terminology, serving as a resource for 200+ faculty and 800+ students.",
-      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&h=350&q=80",
-      technologies: ["HTML", "CSS", "JavaScript", "AWS", "GitHub"],
-      liveUrl: "#",
-      repoUrl: "https://github.com/Wiz1702/KenyonFocal"
-    },
-    {
-      title: "E-Commerce Website",
-      description: "Full-stack e-commerce platform with product listings, user authentication, and order management features. Awarded Best Project of the Semester.",
+      title: "E-Commerce Website (Ken-Comm)",
+      description: "Developed a responsive frontend interface for an e-commerce website used by 100+ simulated users for course testing on Kenyon Campus. Collaborated with team on integrating product listings and user authentication features. Awarded Best Project of the Semester for outstanding performance and innovation.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&h=350&q=80",
-      technologies: ["Ruby on Rails", "HTML", "CSS", "JavaScript"],
+      technologies: ["JavaScript", "Node.js", "Ruby on Rails"],
       liveUrl: "#",
-      repoUrl: "https://github.com/NickJNelson03/E-commerceWebsite"
+      repoUrl: "#"
     },
     {
-      title: "2D Game (Personal Project)",
-      description: "A popular personal project game with over 500+ players. Demonstrates programming skills and creativity in game development.",
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=600&h=350&q=80",
-      technologies: ["Game Development", "JavaScript", "HTML5 Canvas", "CSS"],
+      title: "Integrated Development Environment (KenCode)",
+      description: "Led a team of 7 to build a student-focused IDE to enable secure, real-time Python & C++ code execution in isolated environments. Designed the UI with Next.js and JavaScript, ensuring smooth frontend-backend integration.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=350&q=80",
+      technologies: ["Docker", "Drizzle", "Next.js", "JavaScript"],
       liveUrl: "#",
-      repoUrl: "git@github.com:Wiz1702/Wisdomfloatmaster.git"
+      repoUrl: "#"
+    },
+    {
+      title: "Kenyon College Focal Vocabulary Dictionary",
+      description: "Developed a web-based dictionary to simplify campus terminology, supporting 1,000+ students and faculty. Built using HTML, CSS, JavaScript; hosted on AWS and version-controlled via GitHub to ensure accessibility and security.",
+      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&h=350&q=80",
+      technologies: ["HTML", "CSS", "JavaScript", "AWS"],
+      liveUrl: "#",
+      repoUrl: "#"
     }
   ];
 

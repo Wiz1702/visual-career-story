@@ -5,54 +5,28 @@ import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
 const Education = () => {
   const educationHistory = [
     {
-      degree: "Undergraduate",
+      degree: "Bachelor of Arts",
       field: "Mathematics & Statistics (Data Science)",
       institution: "Kenyon College",
-      location: "Gambier, Ohio",
-      period: "2023 - 2027 (Expected)",
-      minor: "Computer Science",
+      location: "Gambier, Ohio, USA",
+      period: "Graduating May 2027",
       courses: [
-        "Data Structures and Algorithms",
-        "Python Programming",
-        "C++",
+        "Object-Oriented Programming & Data Structures (Python, C++)",
         "Advanced Modelling",
-        "Research Methods",
-        "Applied Logic",
         "Digital Systems",
-        "Classical Physics",
-        "AI & Machine Learning",
         "Web Development",
-        "Software Development",
-        "Software & System development"
+        "Software Design & Development",
+        "AI & Machine Learning (Spring 2026)"
       ]
     }
   ];
 
-  const certifications = [
-    {
-      name: "Wendell D. Lindstrom Memorial Prize",
-      issuer: "Kenyon College",
-      description: "Excellence in Mathematics and Statistics"
-    },
-    {
-      name: "Honors Certificate",
-      issuer: "Codepath",
-      description: "Introduction to Web Software Development"
-    },
-    {
-      name: "Google Data Analytics Certification",
-      issuer: "Google",
-      description: "Foundations in Data Analytics"
-    }
+  const honors = [
+    "Pi-mu-Epsilon Society",
+    "Merit List",
+    "Wendell D Listrom Prize for Excellence in Math and Stat 23-24"
   ];
 
-  const memberships = [
-    "Kenyon College Business and Finance Committee",
-    "Kenyon College Academic Affairs Committee",
-    "Google Developers Association",
-    "ColorStack",
-    "CodePath"
-  ];
 
   return (
     <section id="education" className="py-20 bg-gray-50">
@@ -69,9 +43,8 @@ const Education = () => {
                     <GraduationCap className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold">{edu.degree} in {edu.field}</h3>
+                    <h3 className="text-xl font-semibold">{edu.degree} - {edu.field}</h3>
                     <h4 className="text-lg text-gray-700 mb-2">{edu.institution}</h4>
-                    <p className="font-medium text-gray-600">Minor: {edu.minor}</p>
                     
                     <div className="flex flex-wrap gap-x-4 gap-y-2 mb-3 text-gray-600 text-sm">
                       <div className="flex items-center gap-1">
@@ -100,35 +73,18 @@ const Education = () => {
             ))}
           </div>
 
-          {/* Certifications & Awards */}
+          {/* Honors */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Awards & Certifications</h3>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <Award className="text-primary mt-1" size={20} />
-                    <div>
-                      <h4 className="font-semibold">{cert.name}</h4>
-                      <p className="text-gray-600">{cert.issuer} - {cert.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Professional Memberships */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Professional Memberships</h3>
+            <h3 className="text-2xl font-bold mb-6">Honors</h3>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <ul className="space-y-2 list-disc list-inside text-gray-700">
-                {memberships.map((membership, index) => (
-                  <li key={index}>{membership}</li>
+                {honors.map((honor, index) => (
+                  <li key={index}>{honor}</li>
                 ))}
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
