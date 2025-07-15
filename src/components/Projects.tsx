@@ -11,24 +11,21 @@ const Projects = () => {
       description: "Developed a responsive frontend interface for an e-commerce website used by 100+ simulated users for course testing on Kenyon Campus. Collaborated with team on integrating product listings and user authentication features. Awarded Best Project of the Semester for outstanding performance and innovation.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["JavaScript", "Node.js", "Ruby on Rails"],
-      liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "https://github.com/NickJNelson03/E-commerceWebsite.git"
     },
     {
       title: "Integrated Development Environment (KenCode)",
       description: "Led a team of 7 to build a student-focused IDE to enable secure, real-time Python & C++ code execution in isolated environments. Designed the UI with Next.js and JavaScript, ensuring smooth frontend-backend integration.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["Docker", "Drizzle", "Next.js", "JavaScript"],
-      liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "https://github.com/Bubballoo3/kenCode.git"
     },
     {
       title: "Kenyon College Focal Vocabulary Dictionary",
       description: "Developed a web-based dictionary to simplify campus terminology, supporting 1,000+ students and faculty. Built using HTML, CSS, JavaScript; hosted on AWS and version-controlled via GitHub to ensure accessibility and security.",
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&h=350&q=80",
       technologies: ["HTML", "CSS", "JavaScript", "AWS"],
-      liveUrl: "#",
-      repoUrl: "#"
+      repoUrl: "https://github.com/Wiz1702/KenyonFocal.git"
     }
   ];
 
@@ -59,15 +56,7 @@ const Projects = () => {
                 </div>
               </CardContent>
               <CardFooter className="border-t flex justify-between py-3">
-                <a 
-                  href={project.liveUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors"
-                >
-                  <ExternalLink size={16} />
-                  <span>Live Demo</span>
-                </a>
+
                 <a 
                   href={project.repoUrl} 
                   target="_blank" 
@@ -84,13 +73,13 @@ const Projects = () => {
         
         <div className="text-center mt-10">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/Wiz1702" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary hover:underline"
           >
             <Github className="mr-2" size={18} />
-            <span>View more projects on GitHub</span>
+            <span>GitHub Profile</span>
           </a>
         </div>
       </div>
