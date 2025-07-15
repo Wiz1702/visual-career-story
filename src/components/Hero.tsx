@@ -14,10 +14,10 @@ const Hero = () => {
   return (
     <section className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center py-20 relative overflow-hidden">
       <div className="floating-shapes">
-        <div className="shape w-32 h-32 border border-primary/20 rounded-full"></div>
-        <div className="shape w-24 h-24 bg-primary/10 rounded-lg rotate-45"></div>
-        <div className="shape w-40 h-40 border-2 border-accent/20 rounded-full"></div>
-        <div className="shape w-20 h-20 bg-secondary/20 rounded-full"></div>
+        <div className="shape w-32 h-32 border border-primary/30 rounded-full"></div>
+        <div className="shape w-24 h-24 bg-accent/20 rounded-lg rotate-45"></div>
+        <div className="shape w-40 h-40 border-2 border-primary/25 rounded-full"></div>
+        <div className="shape w-20 h-20 bg-accent/30 rounded-full"></div>
       </div>
       <div className="relative z-10">
         <p className="text-lg text-muted-foreground mb-4">Hello, I'm</p>
