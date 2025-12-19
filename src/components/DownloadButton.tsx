@@ -95,9 +95,13 @@ My 2D Game (Personal Project)  - (Over 500+ players)`;
   };
 
   return (
-    <Button variant="outline" className="flex items-center gap-2" onClick={handleDownload}>
+    <Button 
+      variant="outline" 
+      className="flex items-center gap-2 border-border/50 bg-card/50 backdrop-blur-sm hover:bg-primary/10 hover:border-primary/50 transition-all duration-300" 
+      onClick={handleDownload}
+    >
       <Download size={16} />
-      <span>Download Resume</span>
+      <span>Resume</span>
     </Button>
   );
 };

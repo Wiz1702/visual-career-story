@@ -1,6 +1,7 @@
-
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { GraduationCap, Calendar, MapPin, Award, BookOpen } from 'lucide-react';
 
 const Education = () => {
   const educationHistory = [
@@ -22,69 +23,106 @@ const Education = () => {
   ];
 
   const honors = [
-    "Pi-mu-Epsilon Society",
-    "Merit List",
-    "Wendell D Listrom Prize for Excellence in Math and Stat 23-24"
+    { title: "Pi-mu-Epsilon Society", type: "society" },
+    { title: "Merit List", type: "academic" },
+    { title: "Wendell D Lindstrom Prize for Excellence in Math and Stats 23-24", type: "award" }
   ];
 
-
   return (
-    <section id="education" className="py-20 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
+    <section id="education" className="section-padding bg-gradient-to-b from-background via-card/30 to-background">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="gradient-text">Education</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+        </div>
         
-        <div className="max-w-3xl mx-auto space-y-12">
-          {/* Education */}
-          <div className="space-y-8">
-            {educationHistory.map((edu, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <GraduationCap className="text-primary" size={24} />
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Education Card */}
+          {educationHistory.map((edu, index) => (
+            <Card key={index} className="glass card-hover border-border/30 overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row gap-6">
+                  {/* Icon */}
+                  <div className="shrink-0">
+                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 w-fit">
+                      <GraduationCap className="w-10 h-10 text-primary" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">{edu.degree} - {edu.field}</h3>
-                    <h4 className="text-lg text-gray-700 mb-2">{edu.institution}</h4>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-foreground mb-1">{edu.degree}</h3>
+                    <p className="text-lg text-primary font-medium mb-2">{edu.field}</p>
+                    <p className="text-foreground/90 font-medium mb-4">{edu.institution}</p>
                     
-                    <div className="flex flex-wrap gap-x-4 gap-y-2 mb-3 text-gray-600 text-sm">
-                      <div className="flex items-center gap-1">
-                        <Calendar size={16} />
+                    <div className="flex flex-wrap gap-4 mb-6 text-muted-foreground text-sm">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-primary" />
                         <span>{edu.period}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin size={16} />
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary" />
                         <span>{edu.location}</span>
                       </div>
                     </div>
                     
-                    <div className="mt-4">
-                      <h5 className="font-medium mb-2">Relevant Coursework:</h5>
+                    {/* Coursework */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-4">
+                        <BookOpen className="w-4 h-4 text-accent" />
+                        <h4 className="font-semibold text-foreground">Relevant Coursework</h4>
+                      </div>
                       <div className="flex flex-wrap gap-2">
                         {edu.courses.map((course, courseIndex) => (
-                          <span key={courseIndex} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                          <Badge 
+                            key={courseIndex} 
+                            variant="secondary"
+                            className="bg-secondary/50 text-foreground/80 border border-border/30"
+                          >
                             {course}
-                          </span>
+                          </Badge>
                         ))}
                       </div>
                     </div>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          ))}
+
+          {/* Honors Section */}
+          <Card className="glass border-border/30">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-accent/10">
+                  <Award className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">Academic Honors</h3>
               </div>
-            ))}
-          </div>
-
-          {/* Honors */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Honors</h3>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <ul className="space-y-2 list-disc list-inside text-gray-700">
+              <div className="flex flex-wrap gap-3">
                 {honors.map((honor, index) => (
-                  <li key={index}>{honor}</li>
+                  <Badge 
+                    key={index} 
+                    className={`py-2 px-4 ${
+                      honor.type === 'award' 
+                        ? 'bg-accent/10 text-accent border-accent/30' 
+                        : honor.type === 'society'
+                        ? 'bg-primary/10 text-primary border-primary/30'
+                        : 'bg-secondary/50 text-foreground/80 border-border/30'
+                    } border`}
+                  >
+                    {honor.type === 'award' && '🏆 '}
+                    {honor.type === 'society' && '🎓 '}
+                    {honor.title}
+                  </Badge>
                 ))}
-              </ul>
-            </div>
-          </div>
-
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

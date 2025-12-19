@@ -1,8 +1,7 @@
-
 import React from 'react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, Calendar, Award } from 'lucide-react';
+import { Users, Calendar, Award, Sparkles, Trophy } from 'lucide-react';
 
 const Involvement = () => {
   const involvements = [
@@ -37,54 +36,88 @@ const Involvement = () => {
   ];
 
   const achievements = [
-    "HackOH/IO 2025 Winner - Most Original & Impactful Project",
-    "Wendell D. Lindstrom Prize for Excellence in Math & Stats 2023-24",
-    "Pi Mu Epsilon Society Member",
-    "Merit List Recognition",
-    "Best Project of the Semester - E-Commerce Website"
+    { title: "HackOH/IO 2025 Winner - Most Original & Impactful Project", featured: true },
+    { title: "Wendell D. Lindstrom Prize for Excellence in Math & Stats 2023-24", featured: true },
+    { title: "Pi Mu Epsilon Society Member", featured: false },
+    { title: "Merit List Recognition", featured: false },
+    { title: "Best Project of the Semester - E-Commerce Website", featured: false }
   ];
 
   return (
-    <section id="involvement" className="py-20">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Campus Involvement & Achievements</h2>
+    <section id="involvement" className="section-padding">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Campus <span className="gradient-text">Involvement</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+        </div>
         
-        <div className="max-w-4xl mx-auto space-y-6 mb-12">
+        {/* Involvement Cards */}
+        <div className="max-w-4xl mx-auto grid gap-6 mb-16">
           {involvements.map((item, index) => (
-            <Card key={index} className={`overflow-hidden ${item.highlight ? 'border-l-4 border-l-primary' : ''}`}>
-              <CardHeader className="pb-2">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <div className="flex items-center gap-2">
-                    <Users className="text-primary" size={20} />
-                    <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+            <Card 
+              key={index} 
+              className={`glass card-hover border-border/30 overflow-hidden ${item.highlight ? 'gradient-border' : ''}`}
+            >
+              {item.highlight && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
+              )}
+              <CardContent className="p-6">
+                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 rounded-xl shrink-0 ${item.highlight ? 'bg-primary/10' : 'bg-secondary/50'}`}>
+                      {item.highlight ? (
+                        <Sparkles className="w-5 h-5 text-primary" />
+                      ) : (
+                        <Users className="w-5 h-5 text-muted-foreground" />
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                      <p className={`font-medium ${item.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                        {item.organization}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar size={14} />
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground md:shrink-0">
+                    <Calendar className="w-4 h-4" />
                     <span>{item.period}</span>
                   </div>
                 </div>
-                <p className="text-primary font-medium">{item.organization}</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-muted-foreground mt-4 leading-relaxed pl-0 md:pl-16">{item.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Award className="text-primary" size={24} />
-            <h3 className="text-2xl font-semibold text-center">Awards & Honors</h3>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {achievements.map((achievement, index) => (
-              <Badge key={index} variant="secondary" className="text-sm py-2 px-4">
-                🏆 {achievement}
-              </Badge>
-            ))}
-          </div>
-        </div>
+        {/* Achievements Section */}
+        <Card className="glass border-border/30 max-w-4xl mx-auto">
+          <CardContent className="p-8">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="p-3 rounded-xl bg-accent/10">
+                <Trophy className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground">Awards & Honors</h3>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {achievements.map((achievement, index) => (
+                <Badge 
+                  key={index} 
+                  className={`py-2.5 px-4 text-sm ${
+                    achievement.featured 
+                      ? 'bg-gradient-to-r from-accent/20 to-primary/20 text-foreground border border-accent/30' 
+                      : 'bg-secondary/50 text-foreground/80 border border-border/30'
+                  }`}
+                >
+                  {achievement.featured && '🏆 '}
+                  {achievement.title}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

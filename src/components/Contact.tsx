@@ -1,150 +1,166 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 import { 
   Mail, 
   Phone, 
   Linkedin, 
   Github, 
-  Twitter, 
-  Send 
+  Send,
+  MapPin,
+  ArrowUpRight
 } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Form submission functionality will be implemented here");
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you soon.",
+    });
   };
 
+  const contactInfo = [
+    { icon: Mail, label: 'Email', value: 'akanwe1@kenyon.edu', href: 'mailto:akanwe1@kenyon.edu' },
+    { icon: Phone, label: 'Phone', value: '+1 740-358-3649', href: 'tel:+17403583649' },
+    { icon: MapPin, label: 'Location', value: 'Gambier, Ohio', href: null },
+  ];
+
+  const socialLinks = [
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/wisdom-akanwe' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/Wiz1702' },
+  ];
+
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
+    <section id="contact" className="section-padding">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span className="gradient-text">Touch</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6" />
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            I'm always open to discussing new opportunities, projects, or just having a conversation.
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <p className="text-gray-600 mb-6">
-              Feel free to reach out to me through any of these channels. I'm always open to discussing new opportunities, projects, or just having a conversation.
-            </p>
-            
-            <Card>
-              <CardContent className="p-4 flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Mail className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Email</p>
-                  <a href="mailto:akanwe1@kenyon.edu" className="hover:text-primary transition-colors">
-                    akanwe1@kenyon.edu
+          <div className="space-y-6">
+            {/* Contact Cards */}
+            <div className="space-y-4">
+              {contactInfo.map((item, index) => (
+                <Card key={index} className="glass card-hover border-border/30">
+                  <CardContent className="p-5">
+                    {item.href ? (
+                      <a href={item.href} className="flex items-center gap-4 group">
+                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <item.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{item.label}</p>
+                          <p className="text-foreground font-medium group-hover:text-primary transition-colors">{item.value}</p>
+                        </div>
+                        <ArrowUpRight className="w-4 h-4 ml-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 rounded-xl bg-primary/10">
+                          <item.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{item.label}</p>
+                          <p className="text-foreground font-medium">{item.value}</p>
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Connect with me</h3>
+              <div className="flex gap-3">
+                {socialLinks.map((social, index) => (
+                  <a 
+                    key={index}
+                    href={social.href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-4 rounded-xl glass hover:bg-primary/10 transition-all duration-300 group glow"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-6 h-6 text-foreground/80 group-hover:text-primary transition-colors" />
                   </a>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="p-4 flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Phone className="text-primary" size={20} />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Phone</p>
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 7403583649
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <h3 className="text-xl font-semibold mt-8 mb-4">Social Profiles</h3>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-3 rounded-full shadow-sm hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-3 rounded-full shadow-sm hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white p-3 rounded-full shadow-sm hover:text-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
+                ))}
+              </div>
             </div>
           </div>
           
           {/* Contact Form */}
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Send Me a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    required
-                  />
+          <Card className="glass border-border/30">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-muted-foreground">Your Name</Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      placeholder="John Doe"
+                      className="bg-secondary/50 border-border/50 focus:border-primary"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-muted-foreground">Your Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      className="bg-secondary/50 border-border/50 focus:border-primary"
+                      required
+                    />
+                  </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
-                  </label>
-                  <input
+                <div className="space-y-2">
+                  <Label htmlFor="subject" className="text-muted-foreground">Subject</Label>
+                  <Input
                     id="subject"
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="How can I help you?"
+                    className="bg-secondary/50 border-border/50 focus:border-primary"
                     required
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
-                  <textarea
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-muted-foreground">Message</Label>
+                  <Textarea
                     id="message"
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    rows={5}
+                    placeholder="Your message here..."
+                    className="bg-secondary/50 border-border/50 focus:border-primary resize-none"
                     required
-                  ></textarea>
+                  />
                 </div>
                 
-                <Button type="submit" className="w-full">
-                  <Send size={16} className="mr-2" />
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground group"
+                >
+                  <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                   Send Message
                 </Button>
               </form>
