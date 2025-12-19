@@ -1,13 +1,8 @@
 
 import React from 'react';
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
-  CardDescription 
-} from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Calendar, MapPin, Building } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -16,57 +11,79 @@ const Experience = () => {
       company: "Expert Learning Systems",
       location: "Dublin, OH",
       period: "May 2025 - Present",
-      description: "Developing a scalable web application for 300+ schools in Belize to handle hardware requests, issue logging, and donor engagement, in collaboration with the Government of Belize and a former Apple engineer. Implementing with React for frontend, NodeJS for backend, and phpMyAdmin for database management.",
-      skills: ["React", "Node.js", "phpMyAdmin", "Web Development", "Database Management"]
+      description: [
+        "Developing a scalable web application for 300+ schools in Belize to streamline hardware requests, issue logging, and donor engagement",
+        "Implementing React for frontend and Node.js for backend, with phpMyAdmin for database management",
+        "Partnering with the Government of Belize and staff level engineers to modernize national education technology infrastructure",
+        "Introduced role-based authentication and access control, improving security for administrators, teachers, and donors",
+        "Created automated testing scripts and integrated Jenkins CI/CD pipelines, reducing deployment errors"
+      ],
+      skills: ["React", "Node.js", "phpMyAdmin", "Jenkins", "CI/CD"]
     },
     {
       title: "Data Analytics Intern",
       company: "Ronnie K. Irani Center for the Creation of Economic Wealth",
       location: "Tulsa, OK",
       period: "May 2024 - July 2024",
-      description: "Analyzed market data and forecasted engagement strategies for 3,340 Black Tulsans using Excel, Python and R. Identified 21+ potential partners for Circle Cinema through data-driven insights and strategic outreach. Built a scalable business model for enhanced community engagement across 131K+ residents.",
-      skills: ["Data Analytics", "Python", "R", "Excel", "Market Analysis", "Strategic Planning"]
+      description: [
+        "Built a REST API in Go with Echo web framework, leveraging Postgres for data storage and SQLC for type-safe code, reducing query errors by 30%",
+        "Integrated Judge0 API for real-time code execution, processing 500+ submissions daily with <1s response time",
+        "Deployed application using Docker and Kubernetes, ensuring scalability and reliability in production",
+        "Implemented gRPC communication between microservices, reducing inter-service latency by 40%",
+        "Developed microservices architecture, cutting feature rollout time by 25%"
+      ],
+      skills: ["Go", "PostgreSQL", "Docker", "Kubernetes", "gRPC", "REST API"]
     },
     {
-      title: "Teaching Assistant - Data Structures and Algorithms",
+      title: "Teaching Assistant - Data Structures & Algorithms",
       company: "Kenyon College",
       location: "Gambier, OH",
-      period: "Jan 2024 - Present",
-      description: "Led problem set walkthroughs and held sessions for 200+ students, improving understanding & performance. Assisted in restructuring weekly section content and quizzes, resulting in positive course feedback.",
-      skills: ["Teaching", "Data Structures", "Algorithms", "Student Mentoring", "Curriculum Development"]
+      period: "January 2024 - Present",
+      description: [
+        "Led weekly problem set walkthroughs and review sessions for 200+ students in core computer science course",
+        "Collaborated with professors to redesign weekly content and assessments",
+        "Introduced interactive review strategies (live coding demos, collaborative problem-solving) increasing participation by 30%"
+      ],
+      skills: ["Python", "C++", "Teaching", "Algorithms", "Data Structures"]
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Work Experience</h2>
         
-        <div className="space-y-6 max-w-4xl mx-auto">
-          {experiences.map((job, index) => (
-            <Card key={index} className="relative overflow-hidden border-l-4 border-primary">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                  <div>
-                    <CardTitle>{job.title}</CardTitle>
-                    <CardDescription className="text-base mt-1">
-                      {job.company} • {job.location}
-                    </CardDescription>
+        <div className="max-w-4xl mx-auto space-y-6">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="overflow-hidden border-l-4 border-l-primary">
+              <CardHeader className="pb-2">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar size={14} />
+                    <span>{exp.period}</span>
                   </div>
-                  <span className="text-sm text-gray-500 md:text-right whitespace-nowrap">
-                    {job.period}
-                  </span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <Building size={14} />
+                    <span>{exp.company}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MapPin size={14} />
+                    <span>{exp.location}</span>
+                  </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="mb-4 text-gray-600">
-                  {job.description}
-                </p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+                  {exp.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2">
-                  {job.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="secondary">
-                      {skill}
-                    </Badge>
+                  {exp.skills.map((skill, i) => (
+                    <Badge key={i} variant="secondary">{skill}</Badge>
                   ))}
                 </div>
               </CardContent>

@@ -71,15 +71,21 @@ const About = () => {
           </Card>
         </div>
         
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4 text-muted-foreground">
           <p>
-            I am a Mathematics & Statistics major with a focus on Data Science and a minor in Computer Science at Kenyon College.
+            I'm a Junior at Kenyon College studying Computer Science with a passion for impact-driven software engineering, 
+            AI/ML (RAG pipelines, LLM apps), and community building.
           </p>
           <p>
-            I am passionate about leveraging technology and data analytics to solve complex problems and create impactful solutions.
+            As a Software Engineer focused on scalable web applications and AI integration, I drive digital transformation 
+            through full-stack development and cloud infrastructure implementation. My approach combines technical expertise 
+            with cross-functional collaboration to create robust, user-centered applications.
           </p>
           <p>
-            With experience in software development, data analysis, and business consulting, I am looking forward to opportunities where I can apply my technical and analytical skills to drive innovation.
+            In Spring 2026, I will be studying Machine Learning in Sweden, expanding my global research and applied AI systems expertise.
+          </p>
+          <p className="text-primary font-medium">
+            🏆 Awards: HackOH/IO 2025 Winner (Most Original & Impactful Project) • Wendell D. Lindstrom Prize for Excellence in Math & Stats
           </p>
         </div>
       </div>
