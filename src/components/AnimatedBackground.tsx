@@ -6,11 +6,11 @@ const AnimatedBackground = () => {
       {/* Deep space gradient base */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
       
-      {/* Red orb on left */}
+      {/* Primary blue orb on left */}
       <motion.div
         className="absolute top-1/4 -left-32 w-96 h-96 rounded-full opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(0 85% 55% / 0.5) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(220 90% 55% / 0.5) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
         animate={{
@@ -25,11 +25,11 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Blue orb on right */}
+      {/* Cyan orb on right */}
       <motion.div
         className="absolute top-2/3 -right-32 w-80 h-80 rounded-full opacity-35"
         style={{
-          background: 'radial-gradient(circle, hsl(220 90% 55% / 0.5) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(200 90% 50% / 0.5) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
         animate={{
@@ -44,11 +44,11 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Red-blue blend orb */}
+      {/* Blue blend orb */}
       <motion.div
         className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full opacity-25"
         style={{
-          background: 'radial-gradient(circle, hsl(0 85% 55% / 0.3) 0%, hsl(220 90% 55% / 0.3) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(220 90% 55% / 0.3) 0%, hsl(200 90% 50% / 0.3) 50%, transparent 70%)',
           filter: 'blur(60px)',
         }}
         animate={{
@@ -72,7 +72,7 @@ const AnimatedBackground = () => {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: i % 2 === 0 ? 'hsl(0 85% 55% / 0.4)' : 'hsl(220 90% 55% / 0.4)',
+              background: i % 2 === 0 ? 'hsl(220 90% 55% / 0.4)' : 'hsl(200 90% 50% / 0.4)',
             }}
             animate={{
               opacity: [0.2, 0.8, 0.2],
@@ -94,8 +94,8 @@ const AnimatedBackground = () => {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(hsl(0 85% 55% / 0.2) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(220 90% 55% / 0.2) 1px, transparent 1px)
+            linear-gradient(hsl(220 90% 55% / 0.2) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(200 90% 50% / 0.2) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
@@ -105,7 +105,7 @@ const AnimatedBackground = () => {
       <motion.div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(transparent 50%, hsl(0 85% 55% / 0.02) 50%)',
+          background: 'linear-gradient(transparent 50%, hsl(220 90% 55% / 0.02) 50%)',
           backgroundSize: '100% 4px',
         }}
         animate={{
