@@ -8,7 +8,7 @@ const About = () => {
     { icon: MapPin, label: 'Location', value: 'Gambier, Ohio' },
     { icon: Mail, label: 'Email', value: 'akanwe1@kenyon.edu' },
     { icon: Phone, label: 'Phone', value: '740-358-3649' },
-    { icon: Briefcase, label: 'Focus', value: 'Software Development & AI/ML' },
+    { icon: Briefcase, label: 'Focus', value: 'Software Development, AI/ML, Product Management' },
     { icon: Linkedin, label: 'LinkedIn', value: 'Wisdom Wemoatu Akanwe' },
   ];
 
@@ -57,6 +57,9 @@ const About = () => {
                   <span className="text-primary"> AI integration</span>, I drive digital transformation through full-stack 
                   development and cloud infrastructure implementation. My approach combines technical expertise with 
                   cross-functional collaboration to create robust, user-centered applications.
+                </p>
+                <p>
+                  I also lead <span className="text-foreground font-medium">product management</span> for student and community tools—prioritizing features, running user discovery, and shipping iterations that balance feasibility with impact.
                 </p>
                 <p>
                   In <span className="text-accent font-medium">Spring 2026</span>, I will be studying Machine Learning 
