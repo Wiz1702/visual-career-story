@@ -7,7 +7,7 @@ const Education = () => {
   const educationHistory = [
     {
       degree: "Bachelor of Arts",
-      field: "Mathematics & Statistics (Data Science)",
+      field: "Mathematics & Statistics / Computer Science",
       institution: "Kenyon College",
       location: "Gambier, Ohio, USA",
       period: "Graduating May 2027",
