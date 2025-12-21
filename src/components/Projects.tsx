@@ -8,16 +8,16 @@ const Projects = () => {
     {
       title: "Pchz - AI Startup Pitch Platform",
       description: "Built a TikTok-style video-pitch platform enabling founders to share startup pitches and investors/recruiters to discover. Features AI-powered summarization, semantic search, and content insights using Gemini embeddings and pgvector.",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&h=350&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D5622AQE4__dlzXEwiw/feedshare-shrink_2048_1536/B56ZpGTpchI4A0-/0/1762116147984?e=1767830400&v=beta&t=Z0cG9dszCBcg1U57OlIGsWRx_0CsN8k9RsNuPTRjnsg",
       technologies: ["Next.js", "FastAPI", "Supabase", "pgvector", "Gemini AI"],
       award: "HackOH/IO 2025 Winner - Most Original & Impactful Project",
-      repoUrl: "https://github.com/Wiz1702",
+      repoUrl: "",
       featured: true
     },
     {
       title: "Belize School Labs Platform",
       description: "National system for managing school labs and computer donations for 300+ schools in Belize. Features role-based authentication, hardware request management, issue logging, and donor engagement portal.",
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=350&q=80",
+      image: " https://media.licdn.com/dms/image/v2/D5622AQGPKQsUtjZEKg/feedshare-shrink_2048_1536/B56ZkIc1_WHkA0-/0/1756783403660?e=1767830400&v=beta&t=KoJXlkaouOVmM2yrGbqHdRvzxd65Dvml6kMptKO1iVU",
       technologies: ["React", "Node.js", "phpMyAdmin", "Jenkins"],
       repoUrl: "https://github.com/Wiz1702"
     },

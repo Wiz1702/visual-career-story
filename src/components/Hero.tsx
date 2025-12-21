@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail, Trophy, Sparkles } from 'lucide-react';
 
 const Hero = () => {
+  const profileImage = "/profile.jpg"; // place your headshot at public/profile.jpg
+  const [imageSrc, setImageSrc] = useState(profileImage);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -27,6 +30,17 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
+        {/* Profile Photo */}
+        <div className="animate-in-delay-1 mx-auto mb-8 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-2xl glass">
+          <img
+            src={imageSrc}
+            alt="Portrait of Wisdom Akanwe"
+            className="w-full h-full object-cover"
+            onError={() => setImageSrc('/placeholder.svg')}
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/20 mix-blend-multiply" />
+        </div>
+
         {/* Badge */}
         <div className="animate-in inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
           <Trophy className="w-4 h-4 text-accent" />

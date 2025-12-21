@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import DownloadButton from './DownloadButton';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,9 +81,6 @@ const NavBar = () => {
                 {link.name}
               </button>
             ))}
-            <div className="ml-2">
-              <DownloadButton />
-            </div>
           </nav>
           
           {/* Mobile menu button */}
@@ -122,9 +118,6 @@ const NavBar = () => {
               {link.name}
             </button>
           ))}
-          <div className="pt-2">
-            <DownloadButton />
-          </div>
         </div>
       </div>
     </header>
