@@ -6,11 +6,11 @@ const AnimatedBackground = () => {
       {/* Deep space gradient base */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
       
-      {/* Animated gradient orbs */}
+      {/* Red orb on left */}
       <motion.div
-        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full opacity-30"
+        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--primary) / 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(0 85% 55% / 0.5) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
         animate={{
@@ -25,10 +25,11 @@ const AnimatedBackground = () => {
         }}
       />
       
+      {/* Blue orb on right */}
       <motion.div
-        className="absolute top-2/3 -right-32 w-80 h-80 rounded-full opacity-25"
+        className="absolute top-2/3 -right-32 w-80 h-80 rounded-full opacity-35"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--accent) / 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(220 90% 55% / 0.5) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
         animate={{
@@ -43,10 +44,11 @@ const AnimatedBackground = () => {
         }}
       />
       
+      {/* Red-blue blend orb */}
       <motion.div
-        className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full opacity-20"
+        className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full opacity-25"
         style={{
-          background: 'radial-gradient(circle, hsl(142 70% 45% / 0.3) 0%, hsl(50 90% 55% / 0.2) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(0 85% 55% / 0.3) 0%, hsl(220 90% 55% / 0.3) 50%, transparent 70%)',
           filter: 'blur(60px)',
         }}
         animate={{
@@ -66,10 +68,11 @@ const AnimatedBackground = () => {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-primary/40"
+            className="absolute w-1 h-1 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              background: i % 2 === 0 ? 'hsl(0 85% 55% / 0.4)' : 'hsl(220 90% 55% / 0.4)',
             }}
             animate={{
               opacity: [0.2, 0.8, 0.2],
@@ -91,8 +94,8 @@ const AnimatedBackground = () => {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)
+            linear-gradient(hsl(0 85% 55% / 0.2) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(220 90% 55% / 0.2) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
@@ -102,7 +105,7 @@ const AnimatedBackground = () => {
       <motion.div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(transparent 50%, hsl(var(--primary) / 0.02) 50%)',
+          background: 'linear-gradient(transparent 50%, hsl(0 85% 55% / 0.02) 50%)',
           backgroundSize: '100% 4px',
         }}
         animate={{
