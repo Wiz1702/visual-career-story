@@ -66,9 +66,7 @@ const Hero = () => {
 
         {/* Description */}
         <p className="animate-in-delay-3 max-w-2xl mx-auto text-muted-foreground mb-10 text-base md:text-lg leading-relaxed">
-          Building impactful software that scales. Currently developing EdTech solutions 
-          for <span className="text-foreground font-medium">300+ schools in Belize</span> and 
-          exploring the frontiers of AI/ML.
+          Building impactful software that scales.
         </p>
 
         {/* CTA Buttons */}
